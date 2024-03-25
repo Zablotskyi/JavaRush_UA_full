@@ -1,0 +1,12 @@
+ create mode 100644 src/ua/javarush/task/task18/task1801/Solution.java
+ create mode 100644 src/ua/javarush/task/task18/task1801/f.txt
+padre@padre-HP-ZBook-15-G4:~/javarush/2097384/javarush-project$ git push
+Перерахування обʼєктів: 2994, готово.
+Підрахунок обʼєктів: 100% (2994/2994), готово.
+Дельта компресія з використанням до 8 потоків
+Компресія обʼєктів: 100% (2219/2219), готово.
+Запис обʼєктів: 100% (2993/2993), 848.13 КіБ | 3.37 МіБ/с, готово.
+Всього 2993 (дельта 420), повторно використано 0 (дельта 0), повторно використано пакунків 0
+remote: Resolving deltas: 100% (420/420), done.
+To github.com:Zablotskyi/JavaRush_UA_full.git
+   b927f7e..849b265  main -> main
