@@ -1,0 +1,13 @@
+Ваша гілка не відрізняється від "origin/main".
+
+Невідстежувані файли:
+  (скористайтесь "git add <файл>...", щоб додати до майбутнього коміту)
+        .idea/
+        javarush-project.iml
+        lib/
+        src/
+
+нічого не додано до коміту, але є невідстежувані файли (скористайтесь "git add" для відстежування)
+padre@padre-HP-ZBook-15-G4:~/javarush/2097384/javarush-project$ git push
+Everything up-to-date
+padre@padre-HP-ZBook-15-G4:~/javarush/2097384/javarush-project$
