@@ -14,18 +14,17 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         String fileName = scanner.nextLine();
         FileInputStream fis = new FileInputStream(fileName);
-        byte[] array = new byte[fis.available()];
-        Map<Integer, Byte> setOfBytes = new HashMap<>();
-        int count = 0;
+        int[] array = new int[256];
 
-        fis.read(array);
-        for (int i = 0; i < array.length; i++) {
-            if (setOfBytes.containsKey(array[i]))
-                count++;
+        for (Integer item : array)
+            item = 0;
+
+        while (fis.available() > 0) {
+            array[fis.read()]++;
         }
+        Arrays.sort(array);
+            System.out.print((char) array[array.length - 1]);
 
-
-        System.out.println();
         if (scanner != null && fis != null) {
             scanner.close();
             fis.close();
