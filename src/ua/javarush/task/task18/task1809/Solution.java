@@ -17,13 +17,29 @@ public class Solution {
         String secondFileName = scanner.nextLine();
         FileInputStream fis = null;
         FileOutputStream fos = null;
-        byte[] array
+        byte[] array;
         try {
-            array = new byte[fis.available()];
             fis = new FileInputStream(firstFileName);
             fos = new FileOutputStream(secondFileName);
+            array = new byte[fis.available()];
+            fis.read(array);
+            for (int i = array.length - 1; i >= 0; i--) {
+                fos.write(array[i]);
+            }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (scanner != null && fis != null && fos != null) {
+                scanner.close();
+                try {
+                    fis.close();
+                    fos.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
     }
 }
