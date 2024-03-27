@@ -31,4 +31,16 @@ public class Solution {
         }
     }
 
+    private static class DecoratorMyRunnableImpl implements Runnable {
+        private Runnable runnable;
+        public DecoratorMyRunnableImpl(Runnable runnable) {
+            this.runnable = runnable;
+        }
+
+        @Override
+        public void run() {
+            System.out.println("DecoratorMyRunnableImpl body");
+            runnable.run();
+        }
+    }
 }
