@@ -14,16 +14,16 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         String fileName = scanner.nextLine();
         FileInputStream fis = new FileInputStream(fileName);
-        int[] array = new int[256];
+        byte[] array = new byte[256];
 
-        for (Integer item : array)
+        for (Byte item : array)
             item = 0;
 
         while (fis.available() > 0) {
             array[fis.read()]++;
         }
         Arrays.sort(array);
-            System.out.print((char) array[array.length - 1]);
+        System.out.print((char) array[array.length - 1]);
 
         if (scanner != null && fis != null) {
             scanner.close();
