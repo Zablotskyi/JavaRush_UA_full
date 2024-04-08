@@ -1,13 +1,4 @@
-remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
-To github.com:Zablotskyi/JavaRush_UA_full.git
-   93e4606..274ef3d  main -> main
-padre@padre-HP-ZBook-15-G4:~/javarush/2097384/javarush-project$ git status
-На гілці main
-Ваша гілка не відрізняється від "origin/main".
-
-Невідстежувані файли:
-  (скористайтесь "git add <файл>...", щоб додати до майбутнього коміту)
-        .idea/
-
-нічого не додано до коміту, але є невідстежувані файли (скористайтесь "git add" для відстежування)
-padre@padre-HP-ZBook-15-G4:~/javarush/2097384/javarush-project$
+nn
+##
+oo
+11111111111111112222226

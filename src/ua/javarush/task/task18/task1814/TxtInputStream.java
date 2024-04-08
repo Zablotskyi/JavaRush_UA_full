@@ -1,7 +1,6 @@
 package ua.javarush.task.task18.task1814;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /* 
@@ -21,4 +20,3 @@ public class TxtInputStream extends FileInputStream {
     public static void main(String[] args) {
     }
 }
-

@@ -23,7 +23,14 @@ public class Solution {
             array[fis.read()]++;
         }
         Arrays.sort(array);
-        System.out.print((char) array[array.length - 1]);
+        System.out.print(array.length + " ");
+
+        for (int i = array.length - 1; i > 0; i--) {
+            if (array[i] == array[i - 1])
+                System.out.print(i + " ");
+            else
+                break;
+        }
 
         if (scanner != null && fis != null) {
             scanner.close();
