@@ -21,9 +21,13 @@ public class Solution {
         while (fis.available() > 0) {
             buffer[fis.read()]++;
         }
+
         Arrays.sort(buffer);
-        for (int i = 0; i < 3; i++) {
-            System.out.print(buffer[i] + " ");
+        for (int i = 0; i < buffer.length - 1; i++) {
+            if (buffer[i] != 0) {
+                if (buffer[i] == buffer[i + 1])
+                    System.out.print(i + " ");
+            }
         }
 
         if (scanner != null && fis != null) {
