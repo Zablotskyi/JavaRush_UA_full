@@ -1,7 +1,9 @@
 package ua.javarush.task.task18.task1804;
 
 import java.io.FileInputStream;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /* 
@@ -23,11 +25,15 @@ public class Solution {
         }
 
         Arrays.sort(buffer);
+        List<Integer> resultList = new ArrayList<>();
         for (int i = 0; i < buffer.length - 1; i++) {
             if (buffer[i] != 0) {
-                if (buffer[i] == buffer[i + 1])
-                    System.out.print(i + " ");
+                resultList.add(i);
             }
+        }
+        for (int i = 0; i < resultList.size() - 1; i++) {
+            if (resultList.get(i) == resultList.get(i + 1))
+                System.out.print(resultList.get(i) + " " + resultList.get(i + 1));
         }
 
         if (scanner != null && fis != null) {
