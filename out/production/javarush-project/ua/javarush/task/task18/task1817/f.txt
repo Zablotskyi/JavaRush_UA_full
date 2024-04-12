@@ -1,0 +1,13 @@
+Зміни, не додані до майбутнього коміту:
+  (скористайтесь "git add <файл>...", щоб оновити майбутній коміт)
+  (скористайтесь "git restore <файл>...", щоб скасувати зміни в робочій директорії)
+        змінено:       src/ua/javarush/task/task18/task1817/Solution.java
+
+Невідстежувані файли:
+  (скористайтесь "git add <файл>...", щоб додати до майбутнього коміту)
+        .idea/
+        out/production/javarush-project/ua/javarush/task/task18/task1817/
+        src/ua/javarush/task/task18/task1817/f.txt
+
+не додано жодних змін до коміту (скористайтесь "git add" та/або "git commit -a")
+padre@padre-HP-ZBook-15-G4:~/javarush/2097384/javarush-project$
