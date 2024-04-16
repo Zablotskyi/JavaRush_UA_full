@@ -23,17 +23,14 @@ public class Solution {
         while (fis.available() > 0) {
             buffer[fis.read()]++;
         }
-
-        Arrays.sort(buffer);
-        List<Integer> resultList = new ArrayList<>();
-        for (int i = 0; i < buffer.length - 1; i++) {
-            if (buffer[i] != 0) {
-                resultList.add(i);
-            }
+        int minCount = Integer.MAX_VALUE;
+        for (int i = 0; i < buffer.length; i++) {
+            if (buffer[i] < minCount && buffer[i] != 0)
+                minCount = buffer[i];
         }
-        for (int i = 0; i < resultList.size() - 1; i++) {
-            if (resultList.get(i) == resultList.get(i + 1))
-                System.out.print(resultList.get(i) + " " + resultList.get(i + 1));
+        for (int i = 0; i < buffer.length; i++) {
+            if (buffer[i] == minCount)
+                System.out.print(i + " ");
         }
 
         if (scanner != null && fis != null) {
