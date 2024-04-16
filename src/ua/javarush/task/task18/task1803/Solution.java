@@ -19,16 +19,18 @@ public class Solution {
         for (Byte item : array)
             item = 0;
 
-        while (fis.available() > 0) {
+        while (fis.available() > 0)
             array[fis.read()]++;
-        }
-        Arrays.sort(array);
 
-        for (int i = array.length - 1; i > 0; i--) {
-            if (array[i] == array[i - 1])
-                System.out.print(++i + " ");
-            else
-                break;
+        int maxCount = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > maxCount)
+                maxCount = array[i];
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == maxCount)
+                System.out.print(i + " ");
         }
 
         if (scanner != null && fis != null) {
