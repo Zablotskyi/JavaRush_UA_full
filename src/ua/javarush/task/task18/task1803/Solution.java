@@ -1,9 +1,7 @@
 package ua.javarush.task.task18.task1803;
 
-import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Scanner;
 
 /* 
 Найчастіші байти

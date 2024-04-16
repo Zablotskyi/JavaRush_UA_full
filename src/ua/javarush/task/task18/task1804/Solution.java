@@ -1,9 +1,6 @@
 package ua.javarush.task.task18.task1804;
 
 import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 /* 
