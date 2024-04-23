@@ -20,8 +20,8 @@ public class Solution {
 
         String result = outputStream.toString();
         System.setOut(consoleStream);
-        StringBuilder stringBuilder = new StringBuilder(result);
 
+        StringBuilder stringBuilder = new StringBuilder(result);
         String newString = result.replace("te", "??");
         System.out.println(newString);
     }
