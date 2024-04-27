@@ -28,7 +28,7 @@ public class Solution {
             if (item.intValue() == 32)
                 countSpace++;
         }
-        int countAllSymbols = buffer.length - countSpace;
+        int countAllSymbols = buffer.length;
         if (fis != null) {
             try {
                 fis.close();
@@ -36,8 +36,8 @@ public class Solution {
                 throw new RuntimeException(e);
             }
         }
-        BigDecimal ratio = new BigDecimal(countSpace / countAllSymbols * 100);
-        BigDecimal result = ratio.setScale(2, RoundingMode.HALF_UP);
+        double ratio = (double) countSpace / countAllSymbols * 100;
+        double result = (double) Math.round(ratio * 100) / 100;
         System.out.println(result);
     }
 }
