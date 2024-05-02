@@ -11,21 +11,37 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        PrintWriter writer;
+        BufferedReader reader;
         String firstFileName = scanner.nextLine();
         String secondFileName = scanner.nextLine();
         try {
             File file = new File(firstFileName);
-            FileOutputStream fos = new FileOutputStream(secondFileName);
-            Scanner readNumbers = new Scanner(file);
+            writer = new PrintWriter(secondFileName);
+            reader = new BufferedReader(new FileReader(file));
+            String line;
 
-            while (readNumbers.hasNextDouble()) {
-                double number = readNumbers.nextDouble();
-                System.out.println(number);
+            while ((line = reader.readLine()) != null) {
+                String[] words = line.split(" ");
+
+                for (String item : words) {
+                    double number = Double.parseDouble(item);
+                    writer.print(Math.round(number) + " ");
+                }
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+        if (scanner != null && writer != null && reader != null) {
+            try {
+                scanner.close();
+                writer.close();
+                reader.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
