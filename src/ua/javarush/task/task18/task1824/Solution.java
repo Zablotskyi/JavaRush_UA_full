@@ -18,11 +18,7 @@ public class Solution {
                 fis = new FileInputStream(fileName);
             } catch (FileNotFoundException e) {
                 System.out.println(fileName);
-                try {
-                    throw new Exception("Звершення програми");
-                } catch (Exception ex) {
-                    throw new RuntimeException(ex);
-                }
+                Thread.currentThread().stop();
             }
         }
         if (scanner != null && fis != null) {
